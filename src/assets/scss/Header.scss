@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #e3e3e3;
+
+    span {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}

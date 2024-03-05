@@ -43,6 +43,32 @@
         }
     }
 
+    .tab-view {
+        display: flex;
+        align-items: center;
+        border: 1px solid #525252;
+        width: fit-content;
+        button {
+            width: 35px;
+            padding: 0;
+            height: 35px;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &.clicked {
+                background: rgb(190, 190, 190);
+            }
+
+            img {
+                width: 30px;
+            }
+        }
+        
+    }
+
     .bottom-container {
         display: flex;
         gap: 20px;
@@ -57,6 +83,24 @@
                 width: 100%;
                 min-width: 100%;
             }
+            @media screen and (min-width: 1200px) {
+                grid-template-columns: repeat(4, 1fr);
+              }
+              
+              @media screen and (max-width: 1200px) {
+                grid-template-columns: repeat(3, 1fr);
+
+              }
+              
+              @media screen and (max-width: 1050px) {
+                grid-template-columns: repeat(2, 1fr);
+
+              }
+              
+              @media screen and (max-width: 700px) {
+                grid-template-columns: repeat(1, 1fr);
+
+              }
         }
 
         .loading {

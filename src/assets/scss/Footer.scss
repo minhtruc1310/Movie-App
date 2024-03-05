@@ -1,0 +1,14 @@
+.footer {
+    background: #e8e8e8;
+    height: 20vh;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 12px;
+    justify-content: flex-end;
+
+    span {
+        font-weight: 600;
+        font-size: 16px;
+    }
+}

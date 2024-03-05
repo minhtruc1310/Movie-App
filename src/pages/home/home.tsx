@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../../assets/scss/Home.scss'
 import apiConfig from '../../config/api';
+import listViewIcon from './../../assets/images/listview.png';
+import gridViewIcon from './../../assets/images/gridview.png';
 
 const Home = () => {
     const [selectButton, setSelectButton] = useState<any>('now_playing');
@@ -62,9 +64,10 @@ const Home = () => {
             </div>
         </div>
         <div className='tab-view'>
-            <button onClick={() => selectTab('listview', 'type')} className={typeView === 'now_playing' ? 'selected' : ''} >ListView</button>
-            <button onClick={() => selectTab('gridview', 'type')} className={typeView === 'top_rated' ? 'selected' : ''}>Gridview</button>
+            <button onClick={() => selectTab('listview', 'type')} className={typeView === 'listview' ? 'clicked' : ''} ><img src={listViewIcon} alt="" /></button>
+            <button onClick={() => selectTab('gridview', 'type')} className={typeView === 'gridview' ? 'clicked' : ''}><img src={gridViewIcon} alt="" /></button>
         </div>
+        <span style={{fontSize: '30px', fontWeight: '600'}}>{selectButton === 'now_playing' ? 'Now Playing Movies' : 'Top Rate Movies'}</span>
         <div className={typeView === 'listview' ? 'bottom-container' : 'bottom-container grid'}>
             {  listMovie.length === 0 ?  Array.from({ length: 4 }).map((item: any, i: number) => {
                 return <div className='loading' key={i}></div>
